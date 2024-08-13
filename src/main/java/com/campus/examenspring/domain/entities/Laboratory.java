@@ -24,5 +24,5 @@ public class Laboratory {
 
     @ManyToOne
     @JoinColumn(name = "codecityreg", referencedColumnName = "codecity", nullable = false)
-    private long codeCityReg;
+    private City city;
 }

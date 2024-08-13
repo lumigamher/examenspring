@@ -33,7 +33,7 @@ public class Farmacy {
 
     @ManyToOne
     @JoinColumn(name = "codecityfarm", referencedColumnName = "codecity", nullable = false)
-    private long codeCityFarm;
+    private City city;
 
     @Column(name = "logofarmacy")
     private String logoFarmacy;

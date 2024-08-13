@@ -36,20 +36,20 @@ public class Medicine {
 
     @ManyToOne
     @JoinColumn(name = "codemodeadmin", referencedColumnName = "id", nullable = false)
-    private long codeModeAdmin;
+    private Modeadministration modeadministration;
 
     @ManyToOne
     @JoinColumn(name = "codeap", referencedColumnName = "idap", nullable = false)
-    private long codeAp;
+    private Activeprinciple activeprinciple;
 
     @ManyToOne
     @JoinColumn(name = "codeum", referencedColumnName = "idum", nullable = false)
-    private long codeUm;
+    private Unitmeasurment unitmeasurment;
 
     @Column(name = "namerol")
     private String nameRol;
 
     @ManyToOne
     @JoinColumn(name = "codelab", referencedColumnName = "id", nullable = false)
-    private long codeLab;
+    private Laboratory laboratory;
 }

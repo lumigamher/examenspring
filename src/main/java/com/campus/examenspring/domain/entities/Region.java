@@ -24,5 +24,5 @@ public class Region {
 
     @ManyToOne
     @JoinColumn(name = "codecountry", referencedColumnName = "codecountry", nullable = false)
-    private long codeCountry;
+    private Country country;
 }

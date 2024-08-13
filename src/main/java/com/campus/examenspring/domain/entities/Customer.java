@@ -8,10 +8,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "customer")
+@Data
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,8 +27,9 @@ public class Customer {
     @Column(name = "lastnamecustomer")
     private String lastNameCustomer;
 
+    @ManyToOne
     @JoinColumn(name = "codecitycustomer", referencedColumnName = "codecity", nullable = false)
-    private long codecitycustomer;
+    private City city;
 
     @Column(name = "emailcustomer")
     private String emailCustomer;
