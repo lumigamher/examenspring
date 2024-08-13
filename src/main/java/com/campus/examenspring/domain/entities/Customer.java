@@ -4,8 +4,6 @@ import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -17,9 +15,8 @@ import lombok.Data;
 @Data
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idcustomer")
-    private long idCustomer;
+    private String idCustomer;
 
     @Column(name = "namecustomer")
     private String nameCustomer;
@@ -37,7 +34,7 @@ public class Customer {
     @Column(name = "birthday")
     private Date birthday;
 
-    @Column(name = "long")
+    @Column(name = "longt")
     private double longCustomer;
 
     @Column(name = "lat")

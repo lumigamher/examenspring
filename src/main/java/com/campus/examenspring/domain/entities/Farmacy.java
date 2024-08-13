@@ -25,7 +25,7 @@ public class Farmacy {
     @Column(name = "addressfarmacy")
     private String addressFarmacy;
 
-    @Column(name = "long")
+    @Column(name = "longt")
     private double longFarmacy;
 
     @Column(name = "latfarmacy")
